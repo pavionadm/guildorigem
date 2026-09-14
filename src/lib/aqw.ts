@@ -60,7 +60,14 @@ const KNOWN_LABELS = [
   "Faction",
   "Guild",
   "Name",
+  "Achievements",
+  "Inventory",
 ];
+
+function normalizeGuild(value: string): string {
+  const guild = value.trim();
+  return /^(achievements?|inventory)$/i.test(guild) ? "" : guild;
+}
 
 function extractField(text: string, label: string): string {
   const lines = text.split("\n").map((line) => line.trim());
@@ -172,7 +179,7 @@ function mergeSummaryFromFlashVars(
     helmName: summary.helmName || flashVar(params, "strHelmName"),
     petName: summary.petName || flashVar(params, "strPetName"),
     miscName: summary.miscName || flashVar(params, "strMiscName"),
-    guild: summary.guild || flashVar(params, "guild"),
+    guild: normalizeGuild(summary.guild || flashVar(params, "guild")),
   };
 }
 
@@ -222,7 +229,7 @@ function toSummary(html: string, text: string): CharacterSummary {
     helmName: extractField(text, "Helm"),
     petName: extractField(text, "Pet"),
     miscName: extractField(text, "Misc"),
-    guild: extractField(text, "Guild"),
+    guild: normalizeGuild(extractField(text, "Guild")),
   };
 }
 
