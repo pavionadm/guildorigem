@@ -19,7 +19,7 @@ export default function BadgeList({ badges }: { badges: CharacterBadge[] }): Rea
   }
 
   return (
-    <div className="space-y-7 rounded-sm bg-[#FEF1BF] p-4 sm:p-6">
+    <div className="space-y-7 rounded-sm bg-[#EEE2B8] p-4 sm:p-6">
       {badgesByCategory.map(([categoria, categoryBadges]) => (
         <div key={categoria} className="badge-category">
           <h4 className="font-display text-sm font-semibold uppercase tracking-wide text-[#212121]">

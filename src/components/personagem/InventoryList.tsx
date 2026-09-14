@@ -36,9 +36,9 @@ export default function InventoryList({
       {itemsByType.map(([tipo, tipoItems]) => (
         <div
           key={tipo}
-          className="inventory-category frame-gold rounded-sm bg-void-2 p-3"
+          className="inventory-category frame-gold rounded-sm bg-[#EEE2B8] p-3 text-[#212121]"
         >
-          <h4 className="font-display text-xs uppercase tracking-wide text-gold-light">
+          <h4 className="font-display text-xs uppercase tracking-wide text-[#212121]">
             {tipo}
           </h4>
           <ul className="mt-2 space-y-1.5 text-sm leading-6">
@@ -50,14 +50,14 @@ export default function InventoryList({
                   rel="noopener noreferrer"
                   className={
                     item.bCoins
-                      ? "break-words font-semibold text-gold-light underline-offset-2 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                      ? "break-words font-semibold text-[#6d4c00] underline-offset-2 hover:text-black hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
                       : item.bUpgrade
-                        ? "break-words font-semibold text-sky-200 underline-offset-2 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                        : "break-words font-medium text-parchment underline-offset-2 hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                        ? "break-words font-semibold text-[#155e75] underline-offset-2 hover:text-black hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                        : "break-words font-medium text-[#212121] underline-offset-2 hover:text-black hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
                   }
                 >
                   {item.strName}
-                  <span className="ml-1 whitespace-nowrap font-normal text-mist/85">×{displayCount(item)}</span>
+                    <span className="ml-1 whitespace-nowrap font-normal text-[#212121]/70">×{displayCount(item)}</span>
                 </a>
               </li>
             ))}
