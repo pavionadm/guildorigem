@@ -43,18 +43,18 @@ export default function CharacterCard({ character }: { character: CharacterData 
           })}
         </dl>
         {character.badges.length > 0 ? (
-          <div className="mx-auto mt-5 flex max-w-3xl flex-wrap items-center justify-center gap-3 border-t border-[#212121]/10 pt-4">
+          <div className="mx-auto mt-5 flex max-w-3xl flex-wrap items-center justify-center gap-4 overflow-visible rounded-sm bg-[#FEF1BF] p-4 sm:gap-5">
             {character.badges.slice(0, 5).map((badge) => (
-              <div key={badge.sFileName} className="group relative">
+              <div key={badge.sFileName} className="group relative isolate">
                 <img
                   src={`${BADGE_BASE_URL}${badge.sFileName}`}
                   alt={badge.sTitle}
-                  width={58}
-                  height={48}
+                  width={96}
+                  height={80}
                   loading="lazy"
-                  className="h-12 w-14 object-contain"
+                  className="h-20 w-24 object-contain drop-shadow-[0_2px_3px_rgba(0,0,0,0.35)]"
                 />
-                <span className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-1 w-44 -translate-x-1/2 rounded-sm bg-black px-2 py-1 text-[10px] text-white opacity-0 transition-opacity group-hover:opacity-100">
+                <span className="pointer-events-none absolute left-1/2 top-full z-50 mt-2 w-[min(240px,calc(100vw-2rem))] -translate-x-1/2 whitespace-normal break-words rounded-sm bg-black px-2 py-1 text-[10px] text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100">
                   {badge.sTitle}
                 </span>
               </div>
