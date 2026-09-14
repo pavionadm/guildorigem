@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PersonagemPage(): React.ReactElement {
   return (
-    <section className="min-h-screen bg-[#212121] px-4 py-10 text-[#EEE2B8] sm:px-6 sm:py-16">
+    <section className="min-h-screen bg-[#0b0906] px-4 py-10 text-[#EEE2B8] sm:px-6 sm:py-16">
       <div className="mx-auto max-w-4xl">
       <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#EEE2B8]/80">AQW</p>
       <h1 className="mt-2 font-display text-2xl text-[#EEE2B8] sm:text-3xl">
