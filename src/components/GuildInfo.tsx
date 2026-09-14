@@ -52,7 +52,7 @@ export default function GuildInfo(): React.ReactElement {
           {BG_URL ? (
             <>
               <Image
-                src={BG_URL}
+                src="/zrh.png"
                 alt="Cenário de AdventureQuest Worlds"
                 fill
                 quality={60}
