@@ -48,29 +48,16 @@ export default function GuildInfo(): React.ReactElement {
           </ul>
         </div>
 
-        <div className="frame-gold relative aspect-[4/5] w-full overflow-hidden rounded-sm">
-          {BG_URL ? (
-            <>
-              <Image
-                src="/zrh.png"
-                alt="Cenário de AdventureQuest Worlds"
-                fill
-                quality={60}
-                sizes="(min-width: 640px) 40vw, 90vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-void/70 via-transparent to-transparent" />
-            </>
-          ) : (
-            <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-void-2 text-center">
-              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-gold/50">
-                Imagem em breve
-              </span>
-              <span className="max-w-[70%] text-xs text-mist/40">
-                Imagem de cenário do AQW para esta seção
-              </span>
-            </div>
-          )}
+ <div className="frame-gold relative aspect-[4/5] w-full overflow-hidden rounded-sm">
+          <Image
+            src="/zrh.png"
+            alt="Cenário de AdventureQuest Worlds"
+            fill
+            quality={60}
+            sizes="(min-width: 640px) 40vw, 90vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-void/70 via-transparent to-transparent" />
         </div>
       </div>
     </section>
