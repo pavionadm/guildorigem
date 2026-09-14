@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #0b0906;
+  color: #d8cdb0;
+}
+
+.text-shadow-ember {
+  text-shadow: 0 2px 24px rgba(138, 43, 18, 0.45);
+}
+
+/* Borda estilo "moldura de guilda" — reutilizada nos cards em parchment. */
+.frame-gold {
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  box-shadow: inset 0 0 0 1px rgba(201, 162, 39, 0.12);
+}
+
+/* Barra de rolagem temática (categorias com scroll horizontal no mobile). */
+.themed-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #c9a227 transparent;
+}
+
+.themed-scrollbar::-webkit-scrollbar {
+  height: 3px;
+}
+
+.themed-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.themed-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #c9a227;
+  border-radius: 9999px;
+}
+
+.themed-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #e0c25f;
+}
+
+/* Contenção de listas longas: o navegador só calcula cada categoria quando ela entra no viewport. */
+.inventory-category,
+.badge-category {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 240px;
+}
+
+/* O canvas do player não deve disputar o gesto vertical de rolagem da página no mobile. */
+.character-viewer canvas,
+.character-viewer ruffle-player {
+  display: block;
+  max-width: 100%;
+  touch-action: pan-y;
+}
+.character-viewer {
+  isolation: isolate;
+  contain: layout paint;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+.character-viewer .character-swf,
+.character-viewer canvas {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
