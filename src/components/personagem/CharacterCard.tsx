@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import type { CharacterData } from "@/types/aqw";
 import CharacterViewer from "./CharacterViewer";
 import BadgeList from "./BadgeList";
@@ -47,7 +46,7 @@ export default function CharacterCard({ character }: { character: CharacterData 
           <div className="mx-auto mt-5 flex max-w-3xl flex-wrap items-center justify-center gap-3 border-t border-[#212121]/10 pt-4">
             {character.badges.slice(0, 5).map((badge) => (
               <div key={badge.sFileName} className="group relative">
-                <Image
+                <img
                   src={`${BADGE_BASE_URL}${badge.sFileName}`}
                   alt={badge.sTitle}
                   width={58}
