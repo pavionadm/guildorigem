@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const BG_URL =
-  "https://res.cloudinary.com/dpyhkwaw9/image/upload/v1786472562/aqw_fnydqh.jpg";
+  "https://res.cloudinary.com/dpyhkwaw9/image/upload/v1789418601/274dac53-75f0-4f38-8367-60ac07a71a75_1_lpshyg.png";
 
 export default function GuildHero(): React.ReactElement {
   return (
