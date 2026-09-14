@@ -37,7 +37,7 @@ export default function BadgeList({ badges }: { badges: CharacterBadge[] }): Rea
                   decoding="async"
                   className="h-20 w-24 object-contain drop-shadow-[0_2px_3px_rgba(0,0,0,0.35)]"
                 />
-                <div className="pointer-events-none absolute left-1/2 top-full z-50 mt-2 w-[min(280px,calc(100vw-2rem))] -translate-x-1/2 whitespace-normal break-words rounded-sm bg-black px-3 py-2 text-left text-xs text-white opacity-0 shadow-xl transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+                <div className="pointer-events-none absolute bottom-full left-1/2 z-[100] mb-2 w-[min(280px,calc(100vw-2rem))] -translate-x-1/2 whitespace-normal break-words rounded-sm bg-black px-3 py-2 text-left text-xs text-white opacity-0 shadow-2xl transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
                   <p className="font-semibold text-white">{badge.sTitle}</p>
                   <p className="mt-1 leading-relaxed text-white/75">{badge.sDesc || "Sem descrição disponível."}</p>
                 </div>

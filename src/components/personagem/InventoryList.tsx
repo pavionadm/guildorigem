@@ -6,6 +6,12 @@ function wikiLink(name: string): string {
   return `https://aqwwiki.wikidot.com/${slug}`;
 }
 
+function displayCount(item: CharacterInventoryItem): number {
+  // A API AQW usa o valor de compra/venda em algumas categorias de equipamento
+  // (por exemplo, classes), não a quantidade possuída. Apenas itens podem ser pilhas.
+  return item.strType === "Item" ? Math.max(1, item.intCount) : 1;
+}
+
 export default function InventoryList({
   items,
 }: {
@@ -51,9 +57,7 @@ export default function InventoryList({
                   }
                 >
                   {item.strName}
-                  {item.intCount > 1 ? (
-                    <span className="ml-1 whitespace-nowrap font-normal text-mist/85">×{item.intCount}</span>
-                  ) : null}
+                  <span className="ml-1 whitespace-nowrap font-normal text-mist/85">×{displayCount(item)}</span>
                 </a>
               </li>
             ))}
