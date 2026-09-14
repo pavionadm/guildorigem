@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import Image from "next/image";
 import type { CharacterBadge } from "@/types/aqw";
 
 const BADGE_BASE_URL = "https://game.aq.com/game/gamefiles/badges/";
@@ -28,7 +29,7 @@ export default function BadgeList({ badges }: { badges: CharacterBadge[] }): Rea
           <div className="mt-4 flex flex-wrap gap-4 sm:gap-5">
             {categoryBadges.map((badge) => (
               <div key={badge.sFileName} className="group relative">
-                <img
+                <Image
                   src={`${BADGE_BASE_URL}${badge.sFileName}`}
                   alt={badge.sTitle}
                   width={96}
