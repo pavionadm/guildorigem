@@ -56,10 +56,13 @@ body {
 }
 
 /* Contenção de listas longas: o navegador só calcula cada categoria quando ela entra no viewport. */
-.inventory-category,
-.badge-category {
+.inventory-category {
   content-visibility: auto;
   contain-intrinsic-size: 1px 240px;
+}
+
+.badge-category {
+  position: relative;
 }
 
 /* O canvas do player não deve disputar o gesto vertical de rolagem da página no mobile. */
