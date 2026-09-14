@@ -17,15 +17,6 @@ const CAMPOS: Array<{ label: string; key: keyof CharacterData["summary"] }> = [
   { label: "Acessório", key: "miscName" },
   { label: "Facção", key: "faction" },
 ];
-const BADGE_BASE_URL = "https://game.aq.com/game/gamefiles/badges/";
-const FEATURED_BADGES = [
-  "Blinding Light of Destiny",
-  "King's Echo",
-  "Legion Revenant",
-  "Necrotic Sword of Doom",
-  "Sepulchure's Armor",
-  "Void Highlord",
-];
 
 export default function CharacterCard({ character }: { character: CharacterData }): React.ReactElement {
   const [painelAberto, setPainelAberto] = useState<"badges" | "inventario" | null>(null);
@@ -50,27 +41,6 @@ export default function CharacterCard({ character }: { character: CharacterData 
             );
           })}
         </dl>
-        {character.badges.length > 0 ? (
-          <div className="mx-auto mt-5 flex max-w-3xl flex-wrap items-center justify-center gap-4 overflow-visible rounded-sm bg-[#EEE2B8] p-4 sm:gap-5">
-            {FEATURED_BADGES.map((title) => character.badges.find((badge) => badge.sTitle === title))
-              .filter((badge): badge is (typeof character.badges)[number] => Boolean(badge))
-              .map((badge) => (
-              <div key={badge.sFileName} className="group relative isolate">
-                <img
-                  src={`${BADGE_BASE_URL}${badge.sFileName}`}
-                  alt={badge.sTitle}
-                  width={96}
-                  height={80}
-                  loading="lazy"
-                  className="h-20 w-24 object-contain drop-shadow-[0_2px_3px_rgba(0,0,0,0.35)]"
-                />
-                <span className="pointer-events-none absolute bottom-full left-1/2 z-[100] mb-2 w-[min(240px,calc(100vw-2rem))] -translate-x-1/2 whitespace-normal break-words rounded-sm bg-black px-2 py-1 text-[10px] text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100">
-                  <strong>{badge.sTitle}</strong><br />{badge.sDesc}
-                </span>
-              </div>
-            ))}
-          </div>
-        ) : null}
       </div>
 
       <div className="frame-gold overflow-visible rounded-sm bg-[#EEE2B8] text-[#212121]">
