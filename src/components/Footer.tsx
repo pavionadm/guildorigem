@@ -13,7 +13,7 @@ export default function Footer(): React.ReactElement {
         <p className="mt-3 text-mist/40">
           ©{" "}
           <a
-            href="https://gabrielpavion.vercel.app/"
+            href="https://x.com/zrhaqw"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-mist/70"
