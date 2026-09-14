@@ -26,7 +26,7 @@ export default function CharacterCard({ character }: { character: CharacterData 
     <div className="space-y-4">
       <CharacterViewer rawFlashVars={character.rawFlashVars} characterName={summary.name} />
 
-      <div className="frame-gold rounded-sm bg-[#EEE2B8] p-5 text-center text-[#212121]">
+      <div className="frame-gold rounded-sm bg-[#FEF0C1] p-4 text-center text-[#212121] sm:p-5">
         <h2 className="font-display text-2xl font-semibold">{summary.name}</h2>
         {summary.guild ? <p className="text-sm text-ink/70">Guild: {summary.guild}</p> : null}
         <dl className="mx-auto mt-4 grid max-w-3xl grid-cols-2 gap-x-4 gap-y-3 text-sm sm:grid-cols-4">
@@ -43,7 +43,7 @@ export default function CharacterCard({ character }: { character: CharacterData 
         </dl>
       </div>
 
-      <div className="frame-gold overflow-visible rounded-sm bg-[#EEE2B8] text-[#212121]">
+      <div className="frame-gold overflow-visible rounded-sm bg-[#FEF0C1] text-[#212121]">
         <button
           type="button"
           onClick={() => setPainelAberto(painelAberto === "badges" ? null : "badges")}
@@ -56,7 +56,7 @@ export default function CharacterCard({ character }: { character: CharacterData 
         {painelAberto === "badges" ? <div className="overflow-visible border-t border-[#212121]/10 p-4"><BadgeList badges={character.badges} /></div> : null}
       </div>
 
-      <div className="frame-gold overflow-hidden rounded-sm bg-[#EEE2B8] text-[#212121]">
+      <div className="frame-gold overflow-hidden rounded-sm bg-[#FEF0C1] text-[#212121]">
         <button
           type="button"
           onClick={() => setPainelAberto(painelAberto === "inventario" ? null : "inventario")}

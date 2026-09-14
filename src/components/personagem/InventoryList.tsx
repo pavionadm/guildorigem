@@ -32,11 +32,11 @@ export default function InventoryList({
   }
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
       {itemsByType.map(([tipo, tipoItems]) => (
         <div
           key={tipo}
-          className="inventory-category frame-gold rounded-sm bg-[#EEE2B8] p-3 text-[#212121]"
+          className="inventory-category mb-4 break-inside-avoid frame-gold rounded-sm bg-[#FEF0C1] p-3 text-[#212121]"
         >
           <h4 className="font-display text-xs uppercase tracking-wide text-[#212121]">
             {tipo}

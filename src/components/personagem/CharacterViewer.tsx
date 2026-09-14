@@ -30,7 +30,7 @@ export default function CharacterViewer({ rawFlashVars, characterName }: Props):
   if (!rawFlashVars) {
     return (
       <div
-        className="frame-gold flex aspect-[715/455] w-full items-center justify-center rounded-sm bg-void-2"
+        className="frame-gold flex aspect-[4/5] w-full items-center justify-center rounded-sm bg-void-2 sm:aspect-[715/455]"
         aria-label={`Sprite de ${characterName} indisponível`}
       >
         <p className="px-6 text-center text-xs text-mist/70">
@@ -41,7 +41,7 @@ export default function CharacterViewer({ rawFlashVars, characterName }: Props):
   }
 
   return (
-    <div className="character-viewer frame-gold relative aspect-[715/455] w-full overflow-hidden rounded-sm bg-void-2">
+    <div className="character-viewer frame-gold relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-void-2 sm:aspect-[715/455]">
       <Script
         src="https://unpkg.com/@ruffle-rs/ruffle"
         strategy="afterInteractive"
@@ -62,7 +62,7 @@ export default function CharacterViewer({ rawFlashVars, characterName }: Props):
       />
       {ruffleReady ? (
         <object
-          className="character-swf block h-full w-full"
+          className="character-swf absolute inset-0 block h-full w-full"
           data={SWF_URL}
           type="application/x-shockwave-flash"
           width="715"

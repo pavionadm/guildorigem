@@ -19,13 +19,13 @@ export default function BadgeList({ badges }: { badges: CharacterBadge[] }): Rea
   }
 
   return (
-    <div className="space-y-7 rounded-sm bg-[#EEE2B8] p-4 sm:p-6">
+    <div className="space-y-6 rounded-sm bg-[#FEF0C1] p-3 sm:space-y-7 sm:p-6">
       {badgesByCategory.map(([categoria, categoryBadges]) => (
         <div key={categoria} className="badge-category">
           <h4 className="font-display text-sm font-semibold uppercase tracking-wide text-[#212121]">
             {categoria}
           </h4>
-          <div className="mt-4 flex flex-wrap gap-4 overflow-visible sm:gap-5">
+          <div className="mt-3 flex flex-wrap justify-center gap-2 overflow-visible sm:mt-4 sm:justify-start sm:gap-5">
             {categoryBadges.map((badge) => (
               <div key={badge.sFileName} className="group relative isolate">
                 <img
@@ -35,7 +35,7 @@ export default function BadgeList({ badges }: { badges: CharacterBadge[] }): Rea
                   height={80}
                   loading="lazy"
                   decoding="async"
-                  className="h-20 w-24 object-contain drop-shadow-[0_2px_3px_rgba(0,0,0,0.35)]"
+                  className="h-[4.5rem] w-[5.25rem] object-contain drop-shadow-[0_2px_3px_rgba(0,0,0,0.35)] sm:h-20 sm:w-24"
                 />
                 <div className="pointer-events-none absolute bottom-full left-1/2 z-[100] mb-2 w-[min(280px,calc(100vw-2rem))] -translate-x-1/2 whitespace-normal break-words rounded-sm bg-black px-3 py-2 text-left text-xs text-white opacity-0 shadow-2xl transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
                   <p className="font-semibold text-white">{badge.sTitle}</p>
