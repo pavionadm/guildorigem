@@ -50,7 +50,7 @@ export default function GuildInfo(): React.ReactElement {
 
  <div className="frame-gold relative aspect-[4/5] w-full overflow-hidden rounded-sm">
           <Image
-            src="/zrh.jpg"
+            src="/origem.png"
             alt="Cenário de AdventureQuest Worlds"
             fill
             quality={60}
