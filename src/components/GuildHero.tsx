@@ -14,7 +14,7 @@ export default function GuildHero(): React.ReactElement {
         priority
         quality={80}
         sizes="100vw"
-        className="object-cover"
+        className="object-cover object-top"
       />
       <div className="absolute inset-0 bg-guild-vignette" />
 
