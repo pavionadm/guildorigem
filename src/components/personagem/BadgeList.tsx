@@ -25,9 +25,9 @@ export default function BadgeList({ badges }: { badges: CharacterBadge[] }): Rea
           <h4 className="font-display text-sm font-semibold uppercase tracking-wide text-[#212121]">
             {categoria}
           </h4>
-          <div className="mt-3 flex flex-wrap justify-center gap-2 overflow-visible sm:mt-4 sm:justify-start sm:gap-5">
+          <div className="mt-3 grid grid-cols-[repeat(auto-fill,minmax(5.25rem,1fr))] items-start gap-2 overflow-visible sm:mt-4 sm:grid-cols-[repeat(auto-fill,minmax(6rem,1fr))] sm:gap-5">
             {categoryBadges.map((badge) => (
-              <div key={badge.sFileName} className="group relative isolate">
+              <div key={badge.sFileName} className="group relative isolate flex min-w-0 justify-center">
                 <img
                   src={`${BADGE_BASE_URL}${badge.sFileName}`}
                   alt={badge.sTitle}

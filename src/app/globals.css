@@ -70,6 +70,8 @@ body {
 .character-viewer ruffle-player {
   display: block;
   max-width: 100%;
+  width: 100% !important;
+  height: 100% !important;
   touch-action: pan-y;
 }
 .character-viewer {
